@@ -71,8 +71,6 @@ Start the watcher with Bun:
 bun run index.ts
 ```
 
-or use the provided build for your OS.
-
 - The app will print logs as it detects, uploads, and moves files.
 - Ensure the watched and uploaded folders exist or will be created by the app.
 
@@ -81,6 +79,10 @@ or use the provided build for your OS.
 - Only new files added to the watched folder will be processed.
 - Requires internet access to communicate with the Chivent API.
 - Handles images and other file types, but metadata is extracted for images only.
+
+## Releases
+
+To build the application into a standalone executable with Bun, follow the [Bun bundler guide](https://bun.sh/docs/bundler/executables). Currently, only a Windows build is provided in the releases.
 
 ## Contributing
 
