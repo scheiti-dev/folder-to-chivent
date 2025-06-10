@@ -3,6 +3,7 @@ import path from 'path';
 import mime from 'mime';
 import sharp from 'sharp';
 import { getToken } from './token.js';
+import { Configuration } from "./configuration.js";
 
 interface UploadData {
   versions: Versions
@@ -12,7 +13,8 @@ interface Versions {
   original: string
 }
 
-export async function uploadFile(filePath: string, config: any) {
+export async function uploadFile(filePath: string) {
+  const configuration = await Configuration.getInstance();
   try {
     const fileName = path.basename(filePath);
     const mimeType = mime.getType(filePath);
@@ -26,11 +28,11 @@ export async function uploadFile(filePath: string, config: any) {
 
     console.log(`⬆️  Requesting upload URL for: ${fileName}`);
 
-    const res = await fetch(`https://api.chivent.com/v1/events/${config.EVENT_ID}/upload`, {
+    const res = await fetch(`https://api.chivent.com/v1/events/${configuration.eventId}/upload`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${await getToken(config.EVENT_ID)}`,
+        'Authorization': `Bearer ${await getToken(configuration.eventId)}`,
         'Request-By': 'guest',
       },
       body: JSON.stringify({
@@ -63,8 +65,8 @@ export async function uploadFile(filePath: string, config: any) {
 
     console.log(`✅ Successfully uploaded: ${fileName}`);
 
-    await mkdir(config.UPLOADED_FOLDER, { recursive: true });
-    await rename(filePath, path.join(config.UPLOADED_FOLDER, fileName));
+    await mkdir(configuration.uploadedFolder, { recursive: true });
+    await rename(filePath, path.join(configuration.uploadedFolder, fileName));
     console.log(`📦 Moved to uploaded/: ${fileName}`);
 
   } catch (err: any) {

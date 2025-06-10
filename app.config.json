@@ -1,5 +1,5 @@
 {
-    "EVENT_ID": "your_event_id",
-    "UPLOADED_FOLDER": "./uploaded",
-    "WATCH_FOLDER": "./watched-folder"
+    "eventId": "jbcVXwhkbFCynNOJ",
+    "uploadedFolder": "./uploaded",
+    "watchFolder": ""
 }
