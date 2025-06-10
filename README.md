@@ -84,7 +84,7 @@ bun run index.ts
 
 ## Releases
 
-To build the application into a standalone executable with Bun, follow the [Bun bundler guide](https://bun.sh/docs/bundler/executables). Currently, only a Windows build is provided in the releases.
+To build the application into a standalone executable with Bun, follow the [Bun bundler guide](https://bun.sh/docs/bundler/executables). Currently, only Windows and Linux builds are provided in the releases.
 
 ## Contributing
 
