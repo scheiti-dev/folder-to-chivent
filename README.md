@@ -49,19 +49,21 @@ A utility to automatically watch a folder for new files and upload them to a Chi
 
 ## Configuration
 
-Edit `app.config.json` to set your event ID, watched folder, and uploaded folder:
+An `app.config.json` will be created (if it does not exist) to set your event ID, watched folder, and uploaded folder:
 
 ```json
 {
-  "EVENT_ID": "your_event_id",
-  "UPLOADED_FOLDER": "./uploaded",
-  "WATCH_FOLDER": "./watched-folder"
+  "eventId": "your_event_id",
+  "uploadedFolder": "./uploaded",
+  "watchFolder": "./watched-folder"
 }
 ```
 
-- `EVENT_ID`: The Chivent event ID to upload files to.
-- `UPLOADED_FOLDER`: Where uploaded files will be moved.
-- `WATCH_FOLDER`: The folder to watch for new files.
+- `eventId`: The Chivent event ID to upload files to.
+- `uploadedFolder`: Where uploaded files will be moved.
+- `watchFolder`: The folder to watch for new files.
+
+The application will prompt you to input the ID and valid folders.
 
 ## Usage
 
