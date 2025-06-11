@@ -14,7 +14,7 @@ A utility to automatically watch a folder for new files and upload them to a Chi
 ## Processing Steps
 
 1. **Folder Watching:**  
-   The app uses [chokidar](https://github.com/paulmillr/chokidar) to monitor the folder specified in `app.config.json` under `WATCH_FOLDER`.
+   The app uses [chokidar](https://github.com/paulmillr/chokidar) to monitor the folder specified in `app.config.json` under `watchFolder`.
 
 2. **File Detection:**  
    When a new file is added, its MIME type and metadata (such as image dimensions) are determined.
@@ -26,7 +26,7 @@ A utility to automatically watch a folder for new files and upload them to a Chi
    The file is uploaded directly to the signed URL.
 
 5. **Post-Upload Handling:**  
-   On success, the file is moved to the folder specified by `UPLOADED_FOLDER` in `app.config.json`.
+   On success, the file is moved to the folder specified by `uploadedFolder` in `app.config.json`.
 
 6. **Authentication:**  
    The app manages a guest token for API authentication, refreshing it as needed.
