@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0] - 2024-06-11
+
+### Added
+- Configuration setup during runtime if `app.config.json` does not exist
+- Configuration check if folders exist
+
 ## [1.0.0] - 2024-06-07
 
 ### Added
