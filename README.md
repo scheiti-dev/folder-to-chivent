@@ -85,3 +85,8 @@ To build the application into a standalone executable with Bun, follow the [Bun 
 ## Contributing
 
 I'm happy to receive pull requests! Contributions, bug reports, and suggestions are welcome.
+
+---
+
+Note:
+This tool is not affiliated with Chivent.
