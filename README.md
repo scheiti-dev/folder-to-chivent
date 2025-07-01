@@ -36,11 +36,7 @@ A utility to automatically watch a folder for new files and upload them to a Chi
 1. **Install [Bun](https://bun.sh/):**  
    Follow the instructions on the [Bun website](https://bun.sh/) to install Bun if you haven't already.
 
-2. **Clone this repository:**  
-   ```sh
-   git clone <your-repo-url>
-   cd folder-to-chivent
-   ```
+2. **Clone this repository**
 
 3. **Install dependencies:**  
    ```sh
